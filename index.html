@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Selection on Web Page to Markdown</title>
+    <!-- <script type="text/javascript" src="turndown.js" defer></script> -->
+    <script type="text/javascript" src="index.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        pre {
+            overflow: auto;
+
+            /* Preserve white spaces and newlines */
+            white-space: pre-wrap;
+            /* Ensure long words break correctly */
+            word-wrap: break-word;
+
+            code {
+                background-color: unset;
+            }
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 10px;
+            margin-left: 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 1em 1.5em;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Heading 1</h1>
+
+        <h2>Heading 2</h2>
+
+        <h3>Heading 3</h3>
+
+        <strong>Bold text</strong>
+
+        <em>Italic text</em>
+
+        <strong><em>Bold and Italic</em></strong>
+
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+        </ul>
+
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+        </ol>
+
+        <img src="https://funfungho.com/apple-touch-icon.png" alt="" aria-label="logo" height="35">
+
+        <a href="https://example.com">Link</a>
+
+        <blockquote>Blockquote</blockquote>
+
+        <code>inline code</code>
+
+        <pre><code>
+// This is a code block
+function greet(name) {
+    console.log('Hello, ' + name + '!');
+}
+
+greet('World');</code></pre>
+
+        <hr />
+
+    </div>
+
+    <div id="selection2md"></div>
+</body>
+
+</html>
