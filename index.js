@@ -84,8 +84,8 @@
         let contentInHTML = commonAncestor.outerHTML.replace(commonAncestor.innerHTML, tempDiv.innerHTML);
         // console.log('contentInHTML:', contentInHTML)
 
-        // if contentInHTML is a <pre>, wrap its content in a <code> tag and make the <code> as <pre>'s only child
-        if (contentInHTML.startsWith('<pre')) {
+        // if contentInHTML is a <pre> and that <pre> has no <code> as a child, wrap its content in a <code> tag and make the <code> as <pre>'s only child
+        if (contentInHTML.startsWith('<pre') && !contentInHTML.includes('<code')) {
             const tempElement = document.createElement('div');
             tempElement.innerHTML = contentInHTML;
 
