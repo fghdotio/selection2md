@@ -1,4 +1,4 @@
-async function initSelection2md() {
+(async function () {
     // Check if Clipboard API is available
     if (!navigator.clipboard) {
         console.error('Clipboard API not available');
@@ -126,4 +126,4 @@ async function initSelection2md() {
         e.preventDefault();
         setTimeout(copySelectionToClipboard, 0);
     });
-}
+})();
