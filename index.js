@@ -1,31 +1,10 @@
-(async function () {
+function initSelection2md() {
     // Check if Clipboard API is available
     if (!navigator.clipboard) {
         console.error('Clipboard API not available');
         alert('Clipboard API not available');
         return;
     }
-
-    // Create a new instance of TurndownService, import TurndownService from the CDN if not already available
-    async function loadTurndown() {
-        if (typeof TurndownService === 'undefined') {
-            const script = document.createElement('script');
-            script.src = 'https://unpkg.com/turndown/dist/turndown.js';
-            // script.onload = () => {
-            //     console.log('TurndownService loaded');
-            // };
-            script.onerror = () => {
-                console.error('Failed to load TurndownService');
-                alert('Failed to load TurndownService');
-            }
-            document.head.appendChild(script);
-            await new Promise((resolve, reject) => {
-                script.onload = resolve;
-                script.onerror = reject;
-            });
-        }
-    }
-    await loadTurndown();
 
     // https://github.com/mixmark-io/turndown?tab=readme-ov-file#options
     const turndownService = new TurndownService({
@@ -126,4 +105,4 @@
         e.preventDefault();
         setTimeout(copySelectionToClipboard, 0);
     });
-})();
+}
