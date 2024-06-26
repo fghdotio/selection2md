@@ -6,7 +6,7 @@ The conversion is carried out by [turndown.js](https://github.com/mixmark-io/tur
 
 ## Usage
 
-For Tampermonkey users, you can install the [script](https://github.com/funfungho/selection2md/raw/main/selection2md.user.js) hosted on GitHub.
+For Tampermonkey users, you can install the [script](https://github.com/funfungho/selection2md/raw/main/selection2md.user.js) hosted on GitHub and modify the `@match` value to match the sites you want to use it on.
 
 ## Demo
 
